@@ -5,7 +5,7 @@ from fake_useragent import UserAgent
 import json
 ua = UserAgent()
 
-def get_links(text):
+def get_links(text) -> list:
     parsed_data = []
     url = f'https://spb.hh.ru/search/vacancy?text={text}&area=1&area=2&page=0'
     response = requests.get(url, headers={'user-agent':ua.random})
